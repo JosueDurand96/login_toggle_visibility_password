@@ -28,20 +28,13 @@ class _LoginPageState extends State<LoginPage> {
 
 
 
-  GlobalKey<FormState> _key =  GlobalKey();
-  bool _validate = false;
-  String email, password;
-
-  final emailcontrol01 = TextEditingController();
-  final passcontrol01 = TextEditingController();
-
   @override
   void initState() {
     super.initState();
     //  initGoogle();
   }
   bool _obscureText = true;
-  // Toggles the password show status
+  // Metodo para visualizar contraseña
   void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
@@ -67,19 +60,16 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 30.0),
             Form(
-                key: _key,
-                autovalidate: _validate,
+
                 child: Column(
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                       child: TextFormField(
-                        controller: emailcontrol01,
+
                         maxLength: 32,
 
-                        onSaved: (String value) {
-                          email = value;
-                        },
+
                         decoration: InputDecoration(
                           icon: Icon(Icons.account_circle, color: Colors.blue),
                           labelText: 'Username',
@@ -91,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(
                       padding: const EdgeInsets.only(left: 30.0, right: 30.0),
                       child: TextField(
-                        controller: passcontrol01,
+
                         obscureText: _obscureText,
                         decoration: InputDecoration(
                           icon: Icon(Icons.account_circle, color: Colors.blue),
