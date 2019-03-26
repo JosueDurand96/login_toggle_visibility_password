@@ -50,7 +50,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white70,
       body: Center(
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -59,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
               style:  TextStyle(
                 fontWeight: FontWeight.w500,
                 fontFamily: 'Segoe UI',
-                color: Colors.grey,
+                color: Colors.black,
                 fontSize: 30.0,
               ),
             ),
@@ -79,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                           email = value;
                         },
                         decoration: InputDecoration(
-                          icon: Icon(Icons.account_circle, color: Colors.amber),
+                          icon: Icon(Icons.account_circle, color: Colors.blue),
                           labelText: 'Username',
                         ),
                       ),
@@ -92,10 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                         controller: passcontrol01,
                         obscureText: _obscureText,
                         decoration: InputDecoration(
-                          icon: Icon(
-                            Icons.security,
-                            color: Colors.amber,
-                          ),
+                          icon: Icon(Icons.account_circle, color: Colors.blue),
                           suffixIcon: Icon(
                               Icons.remove_red_eye,
                               color: Colors.grey, size: 25.0),
@@ -133,7 +132,10 @@ class _LoginPageState extends State<LoginPage> {
                         textColor: Colors.white,
                         color: Colors.amber,
                         child:  Text(
-                          "Comencemos",
+                          "INICIAR SESIÓN",
+                          style:  TextStyle(
+                              color: Colors.black,
+                              decoration: TextDecoration.underline),
                         ),
                       ),
                     ),
